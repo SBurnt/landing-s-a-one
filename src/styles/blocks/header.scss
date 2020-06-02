@@ -9,8 +9,26 @@
 
     background: url(/assets/img/header/header-man.png) no-repeat right bottom;
     background-size: auto 620px;
+
+    @media (max-width: 991.98px) {
+      background-size: auto 520px;
+    }
+
+    @media (max-width: 767.98px) {
+      justify-content: flex-start;
+
+      background-size: auto 415px;
+    }
+
+    @media (max-width: 575.98px) {
+      background-position-x: 155px;
+      background-size: auto 350px;
+    }
   }
   &__top {
+    @media (max-width: 767.98px) {
+      margin-bottom: 20px;
+    }
     .contacts {
       &__link {
         font-weight: bold;
@@ -19,6 +37,10 @@
         text-align: center;
         color: rgba(22, 22, 22, 0.8);
         letter-spacing: -0.23px;
+
+        @media (max-width: 767.98px) {
+          font-size: 18px;
+        }
       }
     }
   }
@@ -37,6 +59,20 @@
     span {
       color: $color-red;
     }
+
+    @media (max-width: 991.98px) {
+      max-width: 455px;
+
+      font-size: 26px;
+    }
+
+    @media (max-width: 767.98px) {
+      font-size: 23px;
+    }
+
+    @media (max-width: 575.98px) {
+      font-size: 20px;
+    }
   }
 
   &__subtitle {
@@ -48,6 +84,18 @@
     line-height: 1.44;
     text-transform: uppercase;
     letter-spacing: -0.18px;
+
+    @media (max-width: 991.98px) {
+      max-width: 400px;
+
+      font-size: 17px;
+    }
+
+    @media (max-width: 767.98px) {
+      margin-bottom: 30px;
+
+      font-size: 16px;
+    }
   }
 
   &__list {
@@ -55,7 +103,10 @@
     flex-wrap: wrap;
     width: 100%;
     max-width: 500px;
-    // margin-top: 60px;
+
+    @media (max-width: 767.98px) {
+      margin-bottom: 30px;
+    }
   }
 
   &__item {
@@ -70,8 +121,20 @@
     line-height: 1.53;
     letter-spacing: -0.17px;
 
+    @media (max-width: 991.98px) {
+      width: 100%;
+    }
+
+    @media (max-width: 767.98px) {
+      margin-bottom: 5px;
+    }
+
+    @media (max-width: 575.98px) {
+      margin-bottom: 0;
+    }
+
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       top: 50%;
       left: 0;
@@ -87,6 +150,14 @@
 
   &__btn {
     margin-left: 130px;
+
+    @media (max-width: 991.98px) {
+      margin-left: 50px;
+    }
+
+    @media (max-width: 767.98px) {
+      margin-left: 0;
+    }
   }
 
   @media (max-width: 1919.98px) {
