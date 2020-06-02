@@ -1,0 +1,54 @@
+.footer {
+  background-color: $color-white;
+
+  &__title {
+    margin-bottom: 40px;
+
+    font-size: 17px;
+    line-height: 2.12;
+    text-align: center;
+    letter-spacing: -0.17px;
+  }
+
+  &__description {
+    display: block;
+    width: 100%;
+    max-width: 865px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: center;
+    letter-spacing: -0.14px;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: center;
+    letter-spacing: -0.14px;
+  }
+
+  &__email {
+    color: $color-btn-footer;
+  }
+
+  @media (max-width: 1919.98px) {
+  }
+
+  @media (max-width: 1199.98px) {
+  }
+
+  @media (max-width: 991.98px) {
+  }
+
+  @media (max-width: 767.98px) {
+  }
+
+  @media (max-width: 575.98px) {
+  }
+}

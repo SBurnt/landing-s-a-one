@@ -1,25 +1,12 @@
-.container {
-  width: 100%;
-  max-width: 1160px;
-  margin: 0 auto;
+$color-bg-header: #d5e2f1;
+$color-bg-description: #7fb2db;
+$color-bg-steps: #f5f5f5;
+$color-bg-time-test: #efefef;
 
-  @media (max-width: 1919.98px) {
-    max-width: 1140px;
-  }
+$color-primary: #282828;
+$color-second: #3a4492;
+$color-red: #ee1451;
+$color-white: #ffffff;
 
-  @media (max-width: 1199.98px) {
-    max-width: 960px;
-  }
-
-  @media (max-width: 991.98px) {
-    max-width: 720px;
-  }
-
-  @media (max-width: 767.98px) {
-    max-width: 100%;
-    padding: 0 20px;
-  }
-
-  @media (max-width: 575.98px) {
-  }
-}
+$color-btn-yellow: #f7cd24;
+$color-btn-footer: #ffaa91;

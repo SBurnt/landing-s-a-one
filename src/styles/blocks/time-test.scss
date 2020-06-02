@@ -1,0 +1,36 @@
+.time-test {
+  background-color: $color-bg-time-test;
+
+  &__btn {
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__info {
+    // width: 100%;
+    // max-width: 511px;
+    margin: 0 auto;
+    margin-bottom: 35px;
+
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 1.5;
+    text-align: center;
+    letter-spacing: -0.24px;
+  }
+
+  @media (max-width: 1919.98px) {
+  }
+
+  @media (max-width: 1199.98px) {
+  }
+
+  @media (max-width: 991.98px) {
+  }
+
+  @media (max-width: 767.98px) {
+  }
+
+  @media (max-width: 575.98px) {
+  }
+}

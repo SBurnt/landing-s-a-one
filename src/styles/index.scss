@@ -1,0 +1,15 @@
+@import '~normalize.css';
+@import './helpers/reset';
+@import './fonts/fonts';
+
+@import './helpers/variables';
+@import './helpers/default';
+@import './helpers/mixins';
+
+@import './blocks/header';
+@import './blocks/main';
+@import './blocks/description';
+@import './blocks/steps';
+@import './blocks/partners';
+@import './blocks/time-test';
+@import './blocks/footer';
