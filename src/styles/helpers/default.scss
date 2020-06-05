@@ -196,3 +196,34 @@ body {
     display: none;
   }
 }
+
+.btn__close-modal {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+
+  width: 23px;
+  height: 23px;
+  padding: 0;
+
+  font-weight: 300;
+  font-size: 55px;
+  line-height: 22px;
+  color: #ffffff;
+
+  background: none;
+  border: none;
+
+  &:hover {
+    color: rgb(182, 182, 182);
+  }
+
+  @media (max-width: 767.98px) {
+    top: 15px;
+    right: 15px;
+  }
+}
