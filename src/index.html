@@ -28,7 +28,7 @@
             </ul>
           </div>
           <div class="header__bottom">
-            <button class="header__btn btn__test">начать тест</button>
+            <button class="header__btn btn__test-start js-start-quiz-toggle">начать тест</button>
           </div>
         </div>
       </div>
@@ -59,7 +59,7 @@
                 <p class="description__text">100% вероятность одобрения</p>
               </li>
             </ul>
-            <button class="description__btn btn__test">получить деньги</button>
+            <button class="description__btn btn__test-start js-start-quiz-toggle">получить деньги</button>
           </div>
         </div>
       </section>
@@ -154,11 +154,166 @@
           <div class="section__inner">
             <h2 class="section__title">самое время пройти тест</h2>
             <div class="time-test__info">Пройди тест и получи <b>деньги</b> на нужную сумму</div>
-            <button class="time-test__btn btn__test">получить деньги</button>
+            <button class="time-test__btn btn__test-start js-start-quiz-toggle">получить деньги</button>
           </div>
         </div>
       </section>
     </main>
+    <div class="quiz">
+      <div class="container">
+        <div class="section__inner">
+          <div class="quiz__wrap">
+            <button class="quiz__close js-start-quiz-toggle">&#215;</button>
+            <div class="quiz__change active">
+              <div class="quiz__top">
+                <div class="quiz__check">&#10003;</div>
+                <div class="quiz__info">заполните форму и получите ответ за 30 минут!</div>
+                <div class="quiz__question-number">1/6</div>
+              </div>
+              <div class="progress-bar">
+                <div class="progress" style="width: calc((100% / 6) * 1);"></div>
+              </div>
+              <div class="quiz__middle">
+                <h4 class="question">Какая сумма в рублях вам необходима?</h4>
+                <span class="prompt">Например 100000</span>
+                <div class="answer__form answer-1">
+                  <input class="answer__form-input question1" id="amount-q" type="number" name="amount-q"
+                    inputmode="numeric" onkeyup="this.value = this.value.replace(/[^\+\d]/g,'')" value=""
+                    placeholder="Введите сумму" />
+                </div>
+              </div>
+            </div>
+            <div class="quiz__change">
+              <div class="quiz__top">
+                <div class="quiz__check">&#10003;</div>
+                <div class="quiz__info">заполните форму и получите ответ за 30 минут!</div>
+                <div class="quiz__question-number">2/6</div>
+              </div>
+              <div class="progress-bar">
+                <div class="progress" style="width: calc((100% / 6) * 2);"></div>
+              </div>
+              <div class="quiz__middle">
+                <h4 class="question">В каком регионе вы находитесь?</h4>
+                <span class="prompt">Выберите из списка</span>
+                <div class="answer__form answer-2">
+                  <select class="answer__form-input form_input select" name="region-q" id="region-q">
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="quiz__change">
+              <div class="quiz__top">
+                <div class="quiz__check">&#10003;</div>
+                <div class="quiz__info">заполните форму и получите ответ за 30 минут!</div>
+                <div class="quiz__question-number">3/6</div>
+              </div>
+              <div class="progress-bar">
+                <div class="progress" style="width: calc((100% / 6) * 3);"></div>
+              </div>
+              <div class="quiz__middle">
+                <h4 class="question">Укажите ближайший город</h4>
+                <span class="prompt">Напишите Ваш или ближайший город</span>
+                <div class="answer__form answer-3">
+                  <input class="answer__form-input form_input select" type="text" name="city-q" list="city-q"
+                    placeholder="Введите город">
+                  <datalist id="city-q">
+                  </datalist>
+                </div>
+              </div>
+            </div>
+            <div class="quiz__change">
+              <div class="quiz__top">
+                <div class="quiz__check">&#10003;</div>
+                <div class="quiz__info">заполните форму и получите ответ за 30 минут!</div>
+                <div class="quiz__question-number">4/6</div>
+              </div>
+              <div class="progress-bar">
+                <div class="progress" style="width: calc((100% / 6) * 4);"></div>
+              </div>
+              <div class="quiz__middle">
+                <h4 class="question">Укажите ваш пол</h4>
+                <span class="prompt" style="display: none;">Укажите ваш пол</span>
+                <div class="answer__form answer-4">
+                  <label class="custom-radio">
+                    <input id="gender-q1" type="radio" name="gender-q" value="Мужчина" checked>
+                    <span>Мужчина</span>
+                  </label>
+                  <label class="custom-radio">
+                    <input id="gender-q2" type="radio" name="gender-q" value="Женщина">
+                    <span>Женщина</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="quiz__change">
+              <div class="quiz__top">
+                <div class="quiz__check">&#10003;</div>
+                <div class="quiz__info">заполните форму и получите ответ за 30 минут!</div>
+                <div class="quiz__question-number">5/6</div>
+              </div>
+              <div class="progress-bar">
+                <div class="progress" style="width: calc((100% / 6) * 5);"></div>
+              </div>
+              <div class="quiz__middle">
+                <h4 class="question">Укажите ФИО (полностью)</h4>
+                <span class="prompt">Фамилия Имя Отчество</span>
+                <div class="answer__form answer-5">
+                  <input class="answer__form-input question5" type="text" name="name-q" id="name-q"
+                    placeholder="Иванов Михаил Александрович">
+                </div>
+              </div>
+            </div>
+            <div class="quiz__change">
+              <div class="quiz__top">
+                <div class="quiz__check">&#10003;</div>
+                <div class="quiz__info">заполните форму и получите ответ за 30 минут!</div>
+                <div class="quiz__question-number">6/6</div>
+              </div>
+              <div class="progress-bar">
+                <div class="progress" style="width: calc((100% / 6) * 6);"></div>
+              </div>
+              <div class="quiz__middle">
+                <h4 class="question">Укажите дату рождения</h4>
+                <span class="prompt" style="visibility: hidden;">Укажите дату рождения</span>
+                <div class="answer__form answer-6">
+                  <input class="answer__form-input question6" type="date" name="birthday-q" id="birthday-q"
+                    placeholder="дд.мм.гггг" value="">
+                </div>
+              </div>
+            </div>
+            <div class="quiz__change">
+              <div class="quiz__top">
+                <div class="quiz__check" style="display: none;">&#10003;</div>
+                <div class="quiz__info">ДЕНЬГИ ПОЧТИ У ВАС!</div>
+                <div class="quiz__question-number" style="display: none;">6/6</div>
+              </div>
+              <div class="progress-bar">
+                <div class="progress" style="width: calc((100% / 6) * 6);"></div>
+              </div>
+              <div class="quiz__middle">
+                <h4 class="question">Оставьте свой мобильный номер</h4>
+                <span class="prompt" style="visibility: hidden;">Укажите дату рождения</span>
+                <form class="answer__form form__send answer-7">
+                  <input class="answer__form-input question7" type="tel" inputmode="tel" name="phone" id="phone"
+                    placeholder="Ваш телефон">
+                  <input type="hidden" name="name" id="name" />
+                  <input type="hidden" name="amount" id="amount" />
+                  <input type="hidden" name="region" id="region" />
+                  <input type="hidden" name="city" id="city" />
+                  <input type="hidden" name="gender" id="gender" />
+                  <input type="hidden" name="birthday" id="birthday" />
+                </form>
+              </div>
+            </div>
+            <div class="quiz__bottom">
+              <button class="quiz__btn btn__prev" type="button">&#8592; Назад</button>
+              <button class="quiz__btn btn__next" type="button">Далее &#8594;</button>
+              <button class="quiz__btn btn__send" type="button">Получить деньги</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <footer class="footer">
       <div class="container">
         <div class="section__inner">

@@ -1,0 +1,214 @@
+.quiz {
+  display: none;
+
+  &.active {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+
+    display: flex;
+
+    // display: none;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    align-items: center;
+
+    // padding: 0 20px;
+
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  &__wrap {
+    position: relative;
+
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+
+    background-color: $color-bg-quiz;
+    border-radius: 5px;
+  }
+
+  &__close {
+    position: absolute;
+    top: -30px;
+    right: 0;
+
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    width: 23px;
+    height: 23px;
+    padding: 0;
+
+    font-weight: 300;
+    font-size: 55px;
+    line-height: 22px;
+    color: #ffffff;
+
+    background: none;
+    border: none;
+    &:hover {
+      color: rgb(182, 182, 182);
+    }
+  }
+
+  &__change {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    padding: 35px 45px;
+
+    background-color: $color-bg-quiz-top;
+    border-radius: 5px 5px 0 0;
+  }
+
+  &__check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 19px;
+    height: 19px;
+    margin-right: 9px;
+
+    font-weight: 700;
+    font-size: 14px;
+    color: $color-white;
+
+    background-color: $color-primary;
+    border-radius: 50%;
+  }
+
+  &__info {
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+
+  &__question-number {
+    margin-left: auto;
+
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  &__middle {
+    padding: 40px 45px 80px 45px;
+
+    .question {
+      margin-bottom: 18px;
+
+      font-weight: 500;
+      font-size: 25px;
+      letter-spacing: 0.13px;
+    }
+
+    .prompt {
+      display: block;
+      margin-bottom: 10px;
+
+      font-weight: 300;
+      font-size: 14px;
+      letter-spacing: 0.07px;
+
+      opacity: 0.5;
+    }
+
+    .answer__form-input {
+      width: 100%;
+      padding: 10px 2px 10px;
+
+      font-size: 18px;
+      line-height: 22px;
+
+      border: none;
+      border-bottom: 2px solid rgba(40, 40, 40, 0.2);
+
+      &.select {
+        color: $color-primary;
+
+        background-image: linear-gradient(45deg, transparent 50%, $color-primary 50%),
+          linear-gradient(135deg, $color-primary 50%, transparent 50%);
+        background-repeat: no-repeat;
+        background-position: calc(100% - 25px) calc(1em + 1px), calc(100% - 17px) calc(1em + 1px);
+        background-size: 8px 7px, 8px 7px, 1px;
+
+        -webkit-appearance: none;
+      }
+    }
+
+    .answer-3 {
+      // убрать родную стрелку вниз на datalist cities
+      input::-webkit-calendar-picker-indicator {
+        display: none;
+      }
+    }
+
+    .answer-4 {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        margin-bottom: 15px;
+
+        cursor: pointer;
+      }
+
+      input {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+
+        cursor: pointer;
+      }
+
+      span {
+        font-weight: 400;
+        font-size: 16px;
+        letter-spacing: 0.08px;
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: flex-end;
+    padding: 35px 45px;
+  }
+
+  // Chrome
+  input[type='number']::-webkit-outer-spin-button,
+  input[type='number']::-webkit-inner-spin-button {
+    margin: 0;
+
+    -webkit-appearance: none;
+  }
+
+  // Firefox
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
+  // input[type='number']:hover,
+  // input[type='number']:focus {
+  //   -moz-appearance: number-input;
+  // }
+
+  // other brawser
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    margin: 0;
+
+    -webkit-appearance: none;
+  }
+}
