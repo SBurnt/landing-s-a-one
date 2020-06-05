@@ -12,6 +12,10 @@ if (window.NodeList && !NodeList.prototype.forEach) {
 
 const license = document.querySelector('.license');
 const btnLicense = document.querySelectorAll('.js-license-toggle');
+
+const information = document.querySelector('.information');
+const btnInformation = document.querySelectorAll('.js-information-toggle');
+
 const body = document.querySelector('body');
 
 // ---------- show license start ----------
@@ -22,3 +26,12 @@ btnLicense.forEach((items) => {
   });
 });
 // ---------- show license end ----------
+
+// ---------- show information start ----------
+btnInformation.forEach((items) => {
+  items.addEventListener('click', () => {
+    information.classList.toggle('active');
+    body.classList.toggle('overflow-hidden');
+  });
+});
+// ---------- show information end ----------
