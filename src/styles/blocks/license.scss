@@ -26,9 +26,10 @@
     height: 90vh;
 
     @media (max-width: 767.98px) {
-      justify-content: flex-start;
+      // justify-content: flex-start;
       width: 100%;
       max-width: 450px;
+      height: 80vh;
       overflow-y: auto;
     }
   }
