@@ -16,14 +16,14 @@ const quiz = document.querySelector('.quiz');
 const btnStartQuiz = document.querySelectorAll('.js-start-quiz-toggle');
 const body = document.querySelector('body');
 
-// ---------- show feedback start ----------
+// ---------- show quiz start ----------
 btnStartQuiz.forEach((items) => {
   items.addEventListener('click', () => {
     quiz.classList.toggle('active');
     body.classList.toggle('overflow-hidden');
   });
 });
-// ---------- show feedback end ----------
+// ---------- show quiz end ----------
 
 // ---------- next and previous questions START ----------
 function compileForm() {
@@ -67,10 +67,10 @@ $('.btn__next').click(function () {
     }
   }
 
-  var answer1 = $('.quiz__change.active input[name="amount-q"]').val();
-  var answer3 = $('.quiz__change.active input[name="city-q"]').val();
-  var answer5 = $('.quiz__change.active input[name="name-q"]').val();
-  var answer6 = $('.quiz__change.active input[name="birthday-q"]').val();
+  const answer1 = $('.quiz__change.active input[name="amount-q"]').val();
+  const answer3 = $('.quiz__change.active input[name="city-q"]').val();
+  const answer5 = $('.quiz__change.active input[name="name-q"]').val();
+  const answer6 = $('.quiz__change.active input[name="birthday-q"]').val();
 
   if (answer1 === '') {
     console.log('not f1');
@@ -109,3 +109,39 @@ $('.btn__prev').click(function () {
 });
 
 // ---------- next and previous questions END ----------
+
+// ---------- submitting the form to the server START ----------
+$('.btn__send').on('click', function () {
+  console.log('отправка формы');
+
+  let error = 0;
+  const answer7 = $('.quiz__change.active input[name="phone"]').val();
+  console.log('answer7 ', answer7);
+
+  if (answer7 === '') {
+    error++;
+    $('.quiz__change.active input[name="phone"]').css('border', '1px solid red');
+  } else {
+    $('.quiz__change.active input').css('border', 'none');
+    $('.quiz__change.active input').css('border-bottom', '2px solid rgba(40, 40, 40, 0.2)');
+  }
+
+  if (error > 0) {
+    return false;
+  }
+
+  $('.btn__send').prop('disabled', true);
+
+  const formFooter = document.querySelector('.form__send');
+  let formData = new FormData(formFooter);
+
+  const xmlHttp = new XMLHttpRequest();
+  xmlHttp.onreadystatechange = function () {
+    if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+      alert('Крутяк данные ушли');
+    }
+  };
+  xmlHttp.open('POST', './send/send-base.php');
+  xmlHttp.send(formData);
+});
+// ---------- submitting the form to the server END ----------
