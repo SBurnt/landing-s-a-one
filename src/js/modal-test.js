@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import Inputmask from 'inputmask';
 
 // Browser compatibility ie11 (forEach)
 if (window.NodeList && !NodeList.prototype.forEach) {
@@ -26,6 +27,7 @@ btnStartQuiz.forEach((items) => {
 // ---------- show quiz end ----------
 
 // ---------- next and previous questions START ----------
+
 function compileForm() {
   const regionName = $('.answer__form select[name="region-q"] option:selected');
   $('.form__send input[name="region"]').val(regionName.text());
@@ -105,6 +107,19 @@ $('.btn__prev').click(function () {
 });
 
 // ---------- next and previous questions END ----------
+
+// ---------- validation phone START ----------
+const phone = document.querySelector('#phone');
+Inputmask({
+  mask: '+7 (X99) 999-99-99',
+  definitions: {
+    X: {
+      validator: '9',
+      placeholder: '_',
+    },
+  },
+}).mask(phone);
+// ---------- validation phone END ----------
 
 // ---------- submitting the form to the server START ----------
 $('.btn__send').on('click', function () {
