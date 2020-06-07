@@ -1,0 +1,53 @@
+.thanks {
+  display: none;
+
+  &.active {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+
+    // display: flex;
+
+    display: block;
+
+    // display: none;
+    // align-items: center;
+
+    background: #ffffff;
+  }
+
+  &__wrap {
+    position: relative;
+    top: 50%;
+    left: 50%;
+
+    width: 100%;
+    max-width: 1160px;
+    padding: 60px 45px;
+
+    background-color: $color-second;
+    border-radius: 5px;
+    transform: translate(-50%, -50%);
+
+    @media (max-width: 767.98px) {
+      padding: 10px 10px;
+    }
+  }
+
+  &__text {
+    text-align: center;
+    color: $color-white;
+    font-size: 28px;
+
+    @media (max-width: 767.98px) {
+      font-size: 16px;
+    }
+
+    span {
+      font-weight: 700;
+    }
+  }
+}

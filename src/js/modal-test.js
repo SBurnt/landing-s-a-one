@@ -73,17 +73,13 @@ $('.btn__next').click(function () {
   const answer6 = $('.quiz__change.active input[name="birthday-q"]').val();
 
   if (answer1 === '') {
-    console.log('not f1');
     $('.quiz__change.active input[name="amount-q"]').css('border', '1px solid red');
   } else if (answer3 === '') {
     $('.quiz__change.active input').css('border', '1px solid red');
-    console.log('not f3');
   } else if (answer5 === '') {
     $('.quiz__change.active input').css('border', '1px solid red');
-    console.log('not f5');
   } else if (answer6 === '') {
     $('.quiz__change.active input').css('border', '1px solid red');
-    console.log('not f6');
   } else {
     $('.quiz__change.active input').css('border', 'none');
     $('.quiz__change.active input').css('border-bottom', '2px solid rgba(40, 40, 40, 0.2)');
@@ -112,11 +108,8 @@ $('.btn__prev').click(function () {
 
 // ---------- submitting the form to the server START ----------
 $('.btn__send').on('click', function () {
-  console.log('отправка формы');
-
   let error = 0;
   const answer7 = $('.quiz__change.active input[name="phone"]').val();
-  console.log('answer7 ', answer7);
 
   if (answer7 === '') {
     error++;
@@ -138,7 +131,9 @@ $('.btn__send').on('click', function () {
   const xmlHttp = new XMLHttpRequest();
   xmlHttp.onreadystatechange = function () {
     if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
-      alert('Крутяк данные ушли');
+      const thanks = document.querySelector('.thanks');
+      thanks.classList.toggle('active');
+      body.classList.toggle('overflow-hidden');
     }
   };
   xmlHttp.open('POST', './send/send-base.php');
