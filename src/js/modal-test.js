@@ -73,6 +73,8 @@ $('.btn__next').click(function () {
   const answer3 = $('.quiz__change.active input[name="city-q"]').val();
   const answer5 = $('.quiz__change.active input[name="name-q"]').val();
   const answer6 = $('.quiz__change.active input[name="birthday-q"]').val();
+  // const regBirthday = /\d{2}.\d{2}.\d{4}/;
+  // console.log('regBirthday1 ', regBirthday.exec(answer6));
 
   if (answer1 === '') {
     $('.quiz__change.active input[name="amount-q"]').css('border', '1px solid red');
@@ -108,6 +110,14 @@ $('.btn__prev').click(function () {
 
 // ---------- next and previous questions END ----------
 
+// ---------- validation birthday START ----------
+const birthday = document.querySelector('#birthday-q');
+Inputmask({
+  mask: '99.99.9999',
+  placeholder: 'дд.мм.гггг',
+}).mask(birthday);
+// ---------- validation birthday END ----------
+
 // ---------- validation phone START ----------
 const phone = document.querySelector('#phone');
 Inputmask({
@@ -125,8 +135,9 @@ Inputmask({
 $('.btn__send').on('click', function () {
   let error = 0;
   const answer7 = $('.quiz__change.active input[name="phone"]').val();
+  const regTel = /\+\d{1} \(\d{3}\) \d{3}-\d{2}-\d{2}/;
 
-  if (answer7 === '') {
+  if (regTel.exec(answer7) == null) {
     error++;
     $('.quiz__change.active input[name="phone"]').css('border', '1px solid red');
   } else {

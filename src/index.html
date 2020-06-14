@@ -4,7 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>ОТВЕТЬ НА 6 ВОПРОСОВ И УЖЕ ЧЕРЕЗ 2 МИНУТЫ ПОЛУЧИ ЛУЧШИЕ УСЛОВИЯ ПО КРЕДИТАМ И ЗАЙМАМ С ВЕРОЯТНОСТЬЮ 100%
+    ОДОБРЕНИЯ</title>
+  <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon" />
+  <meta name="author" content="SBurnt - site 1" />
 </head>
 
 <body>
@@ -214,10 +217,15 @@
                 <h4 class="question">Укажите ближайший город</h4>
                 <span class="prompt">Напишите Ваш или ближайший город</span>
                 <div class="answer__form answer-3">
-                  <input class="answer__form-input form_input select" type="text" name="city-q" list="city-q"
+                  <!-- input and datalist if we select the city from the database list-cities -->
+                  <!-- <input class="answer__form-input form_input select" type="text" name="city-q" list="city-q"
                     placeholder="Введите город">
                   <datalist id="city-q">
-                  </datalist>
+                  </datalist> -->
+
+                  <!-- input if the city is entered manually -->
+                  <input class="answer__form-input form_input" type="text" name="city-q" id="city-q"
+                    placeholder="Введите город">
                 </div>
               </div>
             </div>
@@ -276,8 +284,10 @@
                 <h4 class="question">Укажите дату рождения</h4>
                 <span class="prompt" style="visibility: hidden;">Укажите дату рождения</span>
                 <div class="answer__form answer-6">
-                  <input class="answer__form-input question6" type="date" name="birthday-q" id="birthday-q"
-                    placeholder="дд.мм.гггг" value="">
+                  <!-- <input class="answer__form-input question6" type="date" name="birthday-q" id="birthday-q"
+                    placeholder="дд.мм.гггг" value=""> -->
+                  <input class="answer__form-input question6" type="text" name="birthday-q" id="birthday-q"
+                  inputmode="numeric" placeholder="дд.мм.гггг" value="">
                 </div>
               </div>
             </div>
