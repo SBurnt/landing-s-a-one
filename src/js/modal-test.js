@@ -72,17 +72,26 @@ $('.btn__next').click(function () {
   const answer1 = $('.quiz__change.active input[name="amount-q"]').val();
   const answer3 = $('.quiz__change.active input[name="city-q"]').val();
   const answer5 = $('.quiz__change.active input[name="name-q"]').val();
-  const answer6 = $('.quiz__change.active input[name="birthday-q"]').val();
-  // const regBirthday = /\d{2}.\d{2}.\d{4}/;
-  // console.log('regBirthday1 ', regBirthday.exec(answer6));
+  const answer6 = $('.quiz__change.active input[name="birthday-q"]');
 
+  if (answer6.length > 0) {
+    const regBirthday = /\d{2}.\d{2}.\d{4}/;
+    if (regBirthday.exec(answer6.val()) == null) {
+      $('.quiz__change.active input').css('border', '1px solid red');
+      return false;
+    } else {
+      $('.quiz__change.active input').css('border', 'none');
+      $('.quiz__change.active input').css('border-bottom', '2px solid rgba(40, 40, 40, 0.2)');
+      nextQuiz();
+      return true;
+    }
+  }
+  
   if (answer1 === '') {
     $('.quiz__change.active input[name="amount-q"]').css('border', '1px solid red');
   } else if (answer3 === '') {
     $('.quiz__change.active input').css('border', '1px solid red');
   } else if (answer5 === '') {
-    $('.quiz__change.active input').css('border', '1px solid red');
-  } else if (answer6 === '') {
     $('.quiz__change.active input').css('border', '1px solid red');
   } else {
     $('.quiz__change.active input').css('border', 'none');
