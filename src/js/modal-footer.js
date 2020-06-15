@@ -10,6 +10,9 @@ if (window.NodeList && !NodeList.prototype.forEach) {
   };
 }
 
+const footer = document.querySelector('.footer');
+const btnOpenFooter = document.querySelectorAll('.js-footer-open-toggle');
+
 const license = document.querySelector('.license');
 const btnLicense = document.querySelectorAll('.js-license-toggle');
 
@@ -17,6 +20,14 @@ const information = document.querySelector('.information');
 const btnInformation = document.querySelectorAll('.js-information-toggle');
 
 const body = document.querySelector('body');
+
+// ---------- show footer start ----------
+btnOpenFooter.forEach((items) => {
+  items.addEventListener('click', () => {
+    footer.classList.toggle('active');
+  });
+});
+// ---------- show footer end ----------
 
 // ---------- show license start ----------
 btnLicense.forEach((items) => {

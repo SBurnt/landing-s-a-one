@@ -1,5 +1,29 @@
 .footer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
   background-color: $color-white;
+  transform: translateY(100%);
+
+  transition: 0.6s;
+
+  &.active {
+    transform: translateY(0);
+
+    .footer__btn-arrow {
+      transform: translateX(-50%) rotate(0);
+    }
+  }
+
+  .container {
+    position: relative;
+  }
+
+  .section__inner {
+    padding: 15px 0;
+  }
 
   &__title {
     margin-bottom: 40px;
@@ -14,6 +38,13 @@
 
       line-height: 1.5;
     }
+
+    @media (max-width: 320.98px) {
+      margin-bottom: 20px;
+
+      font-size: 15px;
+      line-height: 1.3;
+    }
   }
 
   &__description {
@@ -27,24 +58,56 @@
     line-height: 1.4;
     text-align: center;
     letter-spacing: -0.14px;
+
+    @media (max-width: 320.98px) {
+      font-size: 13px;
+    }
   }
 
   &__info {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     font-size: 14px;
     line-height: 1.4;
-    text-align: center;
+    text-align: right;
     letter-spacing: -0.14px;
 
     @media (max-width: 991.98px) {
       flex-direction: column;
+
+      font-size: 12px;
+      text-align: center;
     }
   }
 
   &__email {
     color: $color-btn-footer;
+  }
+
+  &__btn-arrow {
+    position: absolute;
+    top: -35px;
+    left: 50%;
+
+    width: 25px;
+    height: 25px;
+    padding: 0;
+
+    background: none;
+    border: none;
+    transform: translateX(-50%);
+    transform: rotate(179deg);
+
+    transition: 0.6s;
+
+    svg {
+      width: 25px;
+      height: 25px;
+
+      fill: $color-primary;
+    }
   }
 
   @media (max-width: 1919.98px) {
