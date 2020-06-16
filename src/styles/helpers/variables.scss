@@ -6,13 +6,18 @@ $color-bg-quiz: #ffffff;
 $color-bg-quiz-top: #ececec;
 $color-bg-progress-bar: rgba(40, 40, 40, 0.2);
 $color-bg-progress: #1f5bff;
+$color-bg-thanks: #3a4492;
 
 $color-primary: #282828;
 $color-second: #3a4492;
-$color-red: #ee1451;
+$color-header-title: #3a4492;
+$color-header-title-span: #ee1451;
 $color-white: #ffffff;
+$color-text-description: #ffffff;
 
-$color-btn-yellow: #f7cd24;
+$color-bg-btn-start-test: #f7cd24;
+$color-btn-start-test: $color-primary;
 $color-btn-footer: #ffaa91;
 $color-btn-next: #1f5bff;
 $color-btn-prev: #e0e0e0;
+$color-btn-footer-arrow: $color-primary;

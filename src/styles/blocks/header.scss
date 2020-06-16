@@ -53,11 +53,11 @@
     font-weight: 700;
     font-size: 32px;
     line-height: normal;
-    color: $color-second;
+    color: $color-header-title;
     text-transform: uppercase;
     letter-spacing: -0.32px;
     span {
-      color: $color-red;
+      color: $color-header-title-span;
     }
 
     @media (max-width: 991.98px) {
