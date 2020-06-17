@@ -166,6 +166,7 @@ $('.btn__send').on('click', function () {
   const xmlHttp = new XMLHttpRequest();
   xmlHttp.onreadystatechange = function () {
     if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+      ym(11111111, "reachGoal", "lead");
       const thanks = document.querySelector('.thanks');
       thanks.classList.toggle('active');
       body.classList.toggle('overflow-hidden');
