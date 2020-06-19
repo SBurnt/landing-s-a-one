@@ -306,6 +306,22 @@
                 <form class="answer__form form__send answer-7">
                   <input class="answer__form-input question7" type="tel" inputmode="tel" name="phone" id="phone"
                     placeholder="Ваш телефон">
+                  <p class="question__subtitle">Повысь свой шанс на одобрение<br> (не обязательно):</p>
+                  <select class="answer__form-input form_input select not-necessary" name="purpose" id="purpose">
+                    <option value="0" disabled>Цель кредита</option>
+                    <option value="209" selected>Личные нужды</option>
+                    <option value="208">Ипотека</option>
+                    <option value="210">Автомобиль</option>
+                    <option value="211">Бизнес</option>
+                  </select>
+                  <select class="answer__form-input form_input select not-necessary" name="pledge" id="pledge">
+                    <option value="0" disabled>Залог</option>
+                    <option value="60" selected>Без залога</option>
+                    <option value="61">Дом</option>
+                    <option value="62">Земельный участок</option>
+                    <option value="63">Квартира</option>
+                    <option value="64">Автомобиль/ПТС</option>
+                  </select>
                   <input type="hidden" name="name" id="name" />
                   <input type="hidden" name="amount" id="amount" />
                   <input type="hidden" name="region" id="region" />

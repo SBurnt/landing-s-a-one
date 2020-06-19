@@ -107,6 +107,18 @@
 
         font-size: 20px;
       }
+
+      &__subtitle {
+        margin: 20px 0 5px 0;
+
+        br {
+          display: none;
+
+          @media (max-width: 575.98px) {
+            display: block;
+          }
+        }
+      }
     }
 
     .prompt {
@@ -140,6 +152,13 @@
         background-size: 8px 7px, 8px 7px, 1px;
 
         -webkit-appearance: none;
+      }
+
+      &.not-necessary {
+        padding: 10px 2px 10px;
+
+        font-size: 16px;
+        line-height: 16px;
       }
     }
 
